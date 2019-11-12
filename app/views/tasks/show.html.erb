@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<div class="alert">
+  <p><%= @task.details %></p>
+</div>
+<p><%= check_box("tag", tag.id, {checked: @task.completed}) %> This task is completed</p>
+<%= link_to "Back to list", tasks_path  %>
+<%= link_to "Edit task", edit_path  %>
+<%= link_to 'Delete', task_path,
+    method: :delete,
+    data: {confirm: "Are you sure you want to delete?"}  %>

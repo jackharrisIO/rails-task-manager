@@ -1,0 +1,15 @@
+<h1>Task list</h1>
+<ul style="padding-inline-start:10px">
+<% @tasks.each do |t| %>
+<li style="list-style-type:none">
+  <%= check_box("tag", tag.id, {checked: t.completed}) %>
+  <%= link_to t.title, task_path(t)%>
+  <%= link_to 'Delete', task_path(t),
+    method: :delete,
+    data: {confirm: "Are you sure you want to delete?"},
+    class: "delete_btn"  %>
+
+</li>
+<% end %>
+</ul>
+<%= link_to 'Add a new tast', tasks_new_path  %>

@@ -1,0 +1,17 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.alert {
+  background-color: #ff9800;
+  padding: 10px;
+  border-radius: 10px;
+}
+.alert p {
+  font-weight: lighter;
+}
+
+.delete_btn {
+    position:relative;
+    content: "\f099";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "Font Awesome 5 Free";
+}
